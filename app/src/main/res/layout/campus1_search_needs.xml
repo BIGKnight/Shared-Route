@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/searchNeeds_center_relView"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.RecyclerView
+    android:id="@+id/searchNeeds_recycler_view"
+    android:scrollbars="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        app:layout_anchor="@+id/searchNeeds_recycler_view"
+        app:layout_anchorGravity="bottom|right">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@mipmap/goto_task" />
+
+        <TextView
+            android:id="@+id/tv_bezier_curve_shopping_cart_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_view"
+            android:elevation="6dp"
+            android:shadowColor="@color/transparent"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/fab"
+            android:layout_alignEnd="@+id/fab"
+            android:layout_marginTop="8dp" />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

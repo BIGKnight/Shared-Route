@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.administrator.sharedroute.activity.ConfirmTaskActivity">
+
+    <LinearLayout
+        android:id="@+id/informationlayout"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:clickable="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginStart="60dp"
+                    android:gravity="center"
+                    android:text="确认订单"
+                    android:textColor="@color/orange"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/cardView2"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.8"
+            android:clickable="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="请确认您的信息是否正确"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="姓名   "
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="李四"
+                        android:textSize="18dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="手机   "
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textPhoneNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="12345678"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listViewFirmOrders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/confirm"
+        android:layout_below="@id/informationlayout"
+        android:layout_gravity="top"
+        android:divider="@drawable/listview_divider1"
+        android:dividerHeight="1dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:id="@+id/confirm"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:background="@drawable/roundedcorner3">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#00000000"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="确认接单"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+    </FrameLayout>
+
+</RelativeLayout>
